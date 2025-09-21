@@ -1,14 +1,8 @@
 # DTCG
-Development of technology to verify the effectiveness of service scenarios for responding to autonomous driving-related laws and regulations - Test case scenario generator
 
-![image](https://github.com/janggun-jeon/Encoded-IF/assets/96774001/9fa5f6c4-0b1c-4805-bd12-a89ef82d1ad6)      
-[https://doi.org/10.5302/J.ICROS.2024.23.0200](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11724351)
+<img src="https://github.com/user-attachments/assets/0ed1babf-f20c-4e39-a80b-d4738c17ea07" width="100%"> <img src="https://github.com/user-attachments/assets/08f75d36-3ca6-46ca-9057-93faccd6a88c" width="100%">
 
-![image]([https://github.com/janggun-jeon/Encoded-IF/assets/96774001/9fa5f6c4-0b1c-4805-bd12-a89ef82d1ad6](https://github.com/user-attachments/files/22450908/default.html))  
-[주행 테스트 케이스 생성기 시작메뉴.html](https://github.com/user-attachments/files/22450908/default.html)
-Journal of Institute of Control, Robotics and Systems (2024) 30(3)      
-ISSN:1976-5622       
-eISSN:2233-4335
+Test case scenario generator - Development of technology to verify the effectiveness of service scenarios for responding to autonomous driving-related laws and regulations
 
 ## Usage
 
