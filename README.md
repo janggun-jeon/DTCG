@@ -2,53 +2,25 @@
 
 <img src="https://github.com/user-attachments/assets/0ed1babf-f20c-4e39-a80b-d4738c17ea07" width="100%"> <img src="https://github.com/user-attachments/assets/08f75d36-3ca6-46ca-9057-93faccd6a88c" width="100%">
 
-Test case scenario generator - Development of technology to verify the effectiveness of service scenarios for responding to autonomous driving-related laws and regulations
+Test Case Scenario Generator - Development of technology to verify the effectiveness of service scenarios for responding to autonomous driving-related laws and regulations
 
 ## Usage
 
-### SWaT data processing
-1. Run `unzip ./SWaT/data/SWaT.zip` to unzip the datasets      
-or      
-2. Run `cd ./SWaT/utils`     
-   Run `python gdrivedl.py https://drive.google.com/open?id=1rVJ5ry5GG-ZZi5yI4x9lICB8VhErXwCw ./SWaT`      
-   Run `python gdrivedl.py https://drive.google.com/open?id=1iDYc0OEmidN712fquOBRFjln90SbpaE7 ./SWaT`      
-   Run `mkdir -p ./../data`      
-   Run `mv ./SWaT ./../data/SWaT`     
-
-### Traing & Evaluation
-#### SMD datasets
-`SMD`      
-`machine-1-1`, `machine-1-2`, `machine-1-3`, `machine-1-4`, `machine-1-5`, `machine-1-6`, `machine-1-7`, `machine-1-8`,      
-`machine-2-1`, `machine-2-2`, `machine-2-3`, `machine-2-4`, `machine-2-5`, `machine-2-6`, `machine-2-7`, `machine-2-8`, `machine-2-9`,      
-`machine-3-1`, `machine-3-2`, `machine-3-3`, `machine-3-4`, `machine-3-5`, `machine-3-6`, `machine-3-7`, `machine-3-8`, `machine-3-9`,      
-`machine-3-10`, `machine-3-11`      
-
-#### to run of `SMAP`, `MSL` and `SMD` datasets
-1. Run `main.ipynb` by jupyter      
-or    
-2. Run main.py by python 
+### 1. apache-jena-fuseki
 ```
-# available models : IF, USAD, Encoded-IF
-python main.py --dataset SMAP 
-python main.py --dataset MSL 
-python main.py --dataset SMD
+cd src-knowledgebase/apache-jena-fuseki-4.6.1
 
-# available sub-SMD datasets
-# python main.py --dataset machine-{a}-{b} --model Encoded-IF --max_epoch 0
-# a = {1, 2, 3}
-# b = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
+cmd.exe /c fuseki-server.bat
+```    
+
+### 2. search api
 ```
+cd src-knowledgebase
 
-#### to run of `SWaT` datasets
-1. Run `/SWaT/IsolationForest.ipynb` by jupyter
-2. Run `/SWaT/AutoEncoder.ipynb` by jupyter
-3. Run `/SWaT/USAD.ipynb` by jupyter
-4. Run `/SWaT/Encoded-IF.ipynb` by jupyter
+python APIModule.py
+```   
 
-## Data description
-|Dataset|Train|Test|Dimensions|
-|:----|:----|:----|:----|
-|SWaT|496,800|449,919|51|
-|SMAP|135,183|427,617|25|
-|MSL|58,317|73,729|55|
-|SMD|708,405|708,420|28*28|
+### 3. Run
+```
+yarn tauri dev
+```
